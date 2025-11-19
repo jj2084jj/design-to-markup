@@ -1,0 +1,30 @@
+.visualSection {
+  padding-top: 120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  &M {
+    padding-top: 80px;
+  }
+}
+.visualImage {
+  aspect-ratio: 907 / 644;
+  width: 100%;
+  max-width: 907px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &M {
+    height: 465px;
+    overflow: hidden;
+    aspect-ratio: 270 / 541;
+    max-width: 270px;
+    margin: 0 auto;
+
+  }
+}
