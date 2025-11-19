@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# design-to-markup
-=======
 # 과제 안내사항
 
 ## 기본 사항
@@ -59,4 +56,3 @@
 -   `yarn storybook`: Storybook을 실행합니다. (http://localhost:6006)
 -   `yarn storybook:build`: Storybook을 정적 파일로 빌드합니다.
 -   `yarn dev`: 로컬에서 프로젝트를 실행합니다.
->>>>>>> a67c027 (add/first-commit)
