@@ -1,24 +1,24 @@
-# 과제 안내사항
+# 기본 사항
 
-## 기본 사항
-본 과제는 UI 구현 능력을 평가하기 위한 과제입니다. 아래 사항을 참고하여 구현을 진행해주세요.
+## 구현 의도
+이번 과제에서는 제공된 피그마 디자인을 기준으로 UI 컴포넌트를 구현하는 것이 목표였으며, 지시사항에 따라 Storybook을 활용한 컴포넌트 단위 개발을 진행했습니다.
 
-### 구현 범위
-- Figma 디자인 시안 중 구현 가능한 범위까지만 작업합니다.
-(영상위치: public/video/main.mp4)
+1. 스토리북을 활용함 컴포넌트 재사용성 극대화
+   기본적으로 많이 사용하는 버튼, 타이틀 등을 UI 컴포넌트화 시켰습니다.
+   특히 버튼에서는 argTypes를 활용해 다양한 props 변화에 따른 UI 상태를 테스트했습니다.
+   classNames 를 사용하여 variant 값에 대응하는 스타일을 할당해주었습니다.
+3. 피그마 디자인과의 일치성 
+   디자인 가이드를 기준으로 1100px, 모바일의 경우 최대 콘텐츠 너비 430px 에 부합하게 제작하였습니다.
+4. 적응형 환경을 위해 기기체크 모듈을 구성 (components > utils)
+   isDesktop, isMobile 를 사용하여 현재 기기체크 가능
+5. components 는 home, ui, layout 으로 구성하였습니다.
+   layout - 페이지별 사용가능한 전체 container 환경을 제공합니다. 동시에 header footer 등의 전역으로 사용한 컴포넌트들을 넣었습니다.
+   ui - 스토리북에 넘어간 최소단위 컴포넌트를 조합하여 만든 컴포넌트들을 넣었습니다.
+   home - layout, ui 를 제외한 도메인별 폴더를 생성하였습니다. 추후 도메인 추가 시 도메인별로 폴더를 생성하여 관리하도록 생각했습니다.
 
-
-### 레이아웃 기준
-- Figma 시안은 PC(최대 콘텐츠 너비 1100px)와 모바일(최대 콘텐츠 너비 430px) 두 버전으로 제공됩니다.
-
-### 개발 가이드
-- 과제 의도에 부합한다면 필요한 범위 내에서 자유롭게 설계하고 구현합니다.
-- 웹 표준과 접근성 지침(WCAG 2.1 AA)을 준수한 시맨틱 마크업을 작성합니다.
-- SEO(검색 엔진 최적화)를 고려해 구조를 설계합니다.
-- UI 컴포넌트는 개발자 협업 문서화를 위해 Storybook을 활용합니다.
-
-### 제출 방법
-- 완성된 결과물은 본인 GitHub 저장소에 업로드한 뒤, 저장소 URL과 구현 의도·주요 선택 사항을 README 등 문서로 함께 제출합니다.
+## 후기 
+구현의도대로 설계하지 못한 부분이 많아 아쉬움이 남습니다만
+평소 사용해보고 싶었던 스토리북을 디자인에 맞춰서 사용해보고 직접 실행해보니 생각보다 너무 재밌었습니다.
 
 ## 기술 스택
 - Framework: [Next.js 14](https://nextjs.org/)
@@ -28,31 +28,3 @@
 - Linting: [ESLint](https://eslint.org/)
 - Formatting [Prettier](https://prettier.io/)
 - Package Manager [Yarn](https://yarnpkg.com/)
-
-## 시작하기
-
-### 전제 조건
-
-- [Node.js](https://nodejs.org/en/) (v20.x 이상 권장)
-- [Yarn](https://yarnpkg.com/getting-started/install)
-
-### 설치
-
-1.  저장소를 `Code → Download ZIP`으로 프로젝트를 내려받거나, `Use this template` 기능을 통해 본인 저장소를 생성합니다.
-    ```bash
-    https://github.com/syntekamarketing/design-to-markup.git
-    ```
-2.  프로젝트 디렉토리로 이동합니다.
-    ```bash
-    cd design-to-markup
-    ```
-3.  의존성을 설치합니다.
-    ```bash
-    yarn install
-    ```
-
-### 사용 가능한 스크립트
-
--   `yarn storybook`: Storybook을 실행합니다. (http://localhost:6006)
--   `yarn storybook:build`: Storybook을 정적 파일로 빌드합니다.
--   `yarn dev`: 로컬에서 프로젝트를 실행합니다.
